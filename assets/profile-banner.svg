@@ -1,41 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Hadi Abu Aisha — Software Development and Cybersecurity">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#091426"/>
-      <stop offset="58%" stop-color="#122a4b"/>
-      <stop offset="100%" stop-color="#123b51"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#45e1d5"/>
-      <stop offset="100%" stop-color="#73a7ff"/>
-    </linearGradient>
-    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
-      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#9ac3f8" stroke-width="0.7" opacity="0.12"/>
-    </pattern>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="18"/>
-    </filter>
-  </defs>
-  <rect width="1200" height="330" rx="20" fill="url(#bg)"/>
-  <rect width="1200" height="330" rx="20" fill="url(#grid)"/>
-  <circle cx="1020" cy="35" r="145" fill="#35d6df" opacity="0.12" filter="url(#glow)"/>
-  <circle cx="790" cy="305" r="120" fill="#6c8bff" opacity="0.10" filter="url(#glow)"/>
-  <rect x="53" y="54" width="5" height="219" rx="2.5" fill="url(#accent)"/>
-  <text x="86" y="91" font-family="Arial,Helvetica,sans-serif" fill="#65e0db" font-size="17" font-weight="700" letter-spacing="4">HELLO, I'M</text>
-  <text x="84" y="155" font-family="Arial,Helvetica,sans-serif" fill="#f6faff" font-size="54" font-weight="800" letter-spacing="1">HADI ABU AISHA</text>
-  <rect x="85" y="181" width="410" height="2" fill="url(#accent)" opacity="0.9"/>
-  <text x="85" y="218" font-family="Arial,Helvetica,sans-serif" fill="#c5d9f2" font-size="21">Web Development  /  Cybersecurity</text>
-  <text x="85" y="264" font-family="Arial,Helvetica,sans-serif" fill="#8aa9c9" font-size="17">Building useful software. Learning to secure it.</text>
-  <g transform="translate(780 57)">
-    <rect width="351" height="222" rx="16" fill="#08172b" stroke="#37627d" stroke-width="1.5"/>
-    <path d="M 0 16 Q 0 0 16 0 L 335 0 Q 351 0 351 16 L 351 41 L 0 41 Z" fill="#173451"/>
-    <circle cx="25" cy="20" r="6" fill="#fb7884"/>
-    <circle cx="46" cy="20" r="6" fill="#f9c768"/>
-    <circle cx="67" cy="20" r="6" fill="#48d6b7"/>
-    <text x="24" y="81" font-family="Courier New,monospace" font-size="15" fill="#64e4d1">$ whoami</text>
-    <text x="24" y="111" font-family="Courier New,monospace" font-size="17" fill="#f4f8ff">hadi_abu_aisha</text>
-    <text x="24" y="149" font-family="Courier New,monospace" font-size="14" fill="#8baac8">// build  ·  learn  ·  secure</text>
-    <text x="24" y="181" font-family="Courier New,monospace" font-size="15" fill="#70aaff">&gt; keep_learning();</text>
-    <rect x="215" y="170" width="9" height="17" fill="#70aaff" opacity="0.85"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Animated Hadi Abu Aisha developer profile banner">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081221"/><stop offset=".55" stop-color="#0e2942"/><stop offset="1" stop-color="#14283f"/></linearGradient>
+<linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4aeacb"/><stop offset=".55" stop-color="#70bdff"/><stop offset="1" stop-color="#ab98ff"/></linearGradient>
+<linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#58edeb" stop-opacity="0"/><stop offset=".5" stop-color="#58edeb" stop-opacity=".28"/><stop offset="1" stop-color="#58edeb" stop-opacity="0"/></linearGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#93bce8" stroke-opacity=".13" stroke-width=".7"/></pattern>
+<clipPath id="frame"><rect width="1200" height="330" rx="20"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="330" fill="url(#bg)"/>
+<rect width="1200" height="330" fill="url(#grid)"/>
+<circle cx="1020" cy="45" r="174" fill="#3a9fb4" opacity=".07"><animate attributeName="r" values="152;187;152" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="750" cy="320" r="145" fill="#7078ff" opacity=".07"><animate attributeName="r" values="125;155;125" dur="8s" repeatCount="indefinite"/></circle>
+<rect x="-300" y="0" width="300" height="330" fill="url(#scan)"><animate attributeName="x" values="-300;1230" dur="8s" repeatCount="indefinite"/></rect>
+<path d="M43 50H60M43 50V280M43 280H60" fill="none" stroke="url(#line)" stroke-width="3" opacity=".9"/>
+<text x="85" y="88" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#65e5d1">HELLO, I'M</text>
+<text x="84" y="154" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="800" fill="#f5faff">HADI ABU AISHA</text>
+<rect x="84" y="174" width="470" height="3" rx="2" fill="#263e5f"/>
+<rect x="84" y="174" width="140" height="3" rx="2" fill="url(#line)"><animate attributeName="x" values="84;410;84" dur="5s" repeatCount="indefinite"/></rect>
+<text x="85" y="217" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#d2e4f3">Java  ·  JavaFX  ·  JavaScript  ·  Python</text>
+<text x="85" y="254" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#8faac4">Software Development  /  Cybersecurity</text>
+<g transform="translate(770 52)">
+<rect width="367" height="228" rx="17" fill="#071627" stroke="#2b637c" stroke-width="1.5"/>
+<path d="M17 0H350Q367 0 367 17V43H0V17Q0 0 17 0" fill="#142d45"/>
+<circle cx="25" cy="21" r="6" fill="#f47786"/><circle cx="47" cy="21" r="6" fill="#f6be70"/><circle cx="69" cy="21" r="6" fill="#51d2ad"/>
+<text x="24" y="82" font-family="Courier New,monospace" font-size="15" fill="#68e3d5">$ whoami</text>
+<text x="24" y="114" font-family="Courier New,monospace" font-size="18" fill="#f3fcff">hadi_abu_aisha</text>
+<text x="24" y="153" font-family="Courier New,monospace" font-size="14" fill="#95b6ce">// code. create. secure.</text>
+<text x="24" y="189" font-family="Courier New,monospace" font-size="17" fill="#7bbdff">&gt; building_future()</text>
+<rect x="222" y="173" width="10" height="20" rx="1" fill="#68ddcd"><animate attributeName="opacity" values="1;1;0;0;1" dur="1.3s" repeatCount="indefinite"/></rect>
+<g transform="translate(326 75)">
+<circle r="26" fill="none" stroke="#3d9caa" stroke-opacity=".45" stroke-width="1"/>
+<path d="M0-33A33 33 0 0 1 33 0" fill="none" stroke="#64e4d6" stroke-width="3" stroke-linecap="round">
+<animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+</path>
+<circle cx="0" cy="0" r="5" fill="#6cf0ce"><animate attributeName="opacity" values=".4;1;.4" dur="2s" repeatCount="indefinite"/></circle>
+</g>
+</g>
+<g fill="#80e3e9"><circle cx="689" cy="68" r="3"><animate attributeName="cy" values="68;55;68" dur="3s" repeatCount="indefinite"/></circle><circle cx="726" cy="135" r="2"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/></circle><circle cx="685" cy="266" r="2"><animate attributeName="cy" values="266;250;266" dur="4s" repeatCount="indefinite"/></circle></g>
+</g>
 </svg>
