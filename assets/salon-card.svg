@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-label="Salon Abu Al Qais project showcase banner">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#171c2f"/><stop offset="1" stop-color="#3e2953"/></linearGradient><linearGradient id="line" x1="0" x2="1"><stop stop-color="#d8a9ff"/><stop offset="1" stop-color="#f1d58a"/></linearGradient><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#edd0ff" opacity=".17"/></pattern></defs>
+<rect width="700" height="300" rx="24" fill="url(#bg)"/><rect width="700" height="300" rx="24" fill="url(#dots)"/>
+<circle cx="565" cy="120" r="94" fill="none" stroke="#ecd5ff" opacity=".12" stroke-width="2"/><circle cx="565" cy="120" r="121" fill="none" stroke="#ecd5ff" opacity=".08" stroke-width="2"/>
+<g transform="translate(524 70) rotate(-15 40 50)" stroke="#e2baf8" stroke-width="7" stroke-linecap="round" fill="none"><circle cx="18" cy="105" r="19"/><circle cx="73" cy="105" r="19"/><path d="M31 91L97 10M59 90L-6 10M31 91L92 13"/><circle cx="46" cy="73" r="4" fill="#f0d48f" stroke="none"/></g>
+<rect x="38" y="46" rx="13" width="195" height="34" fill="#dda0ff" opacity=".15"/><text x="53" y="69" fill="#e0b0ff" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">FEATURED PROJECT</text>
+<text x="38" y="142" fill="#fff" font-family="Arial,sans-serif" font-size="43" font-weight="800">SALON ABU AL QAIS</text>
+<text x="40" y="183" fill="#e7dbed" font-family="Arial,sans-serif" font-size="19">A modern salon management experience.</text>
+<rect x="40" y="213" width="340" height="3" rx="1.5" fill="url(#line)"/>
+<text x="40" y="252" fill="#c4afce" font-family="Arial,sans-serif" font-size="15" letter-spacing=".8">REACT  /  VITE  /  SUPABASE  /  CAPACITOR</text>
+</svg>
