@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="./assets/profile-banner.svg" width="100%" alt="Hadi Abu Aisha — Software Development and Cybersecurity" />
+<img src="./assets/profile-banner.svg" width="100%" alt="Animated Hadi Abu Aisha developer banner" />
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2800&pause=1000&color=45DCD5&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Hadi+Abu+Aisha+%F0%9F%91%8B;Java+%7C+JavaFX+%7C+JavaScript+%7C+Python;Building+projects+with+purpose;Learning+Web+Security+%26+Cybersecurity" alt="Animated typing introduction" />
 
 <br/>
 
@@ -101,6 +105,24 @@ A modern salon management application project designed around **appointments, cu
 | 🐍 **Python** | Automation, problem-solving and practical scripts |
 | 🛡️ **Cybersecurity** | Web security labs, responsible testing and vulnerability research |
 | 🏗️ **Projects** | Turning ideas into useful, real-world applications |
+
+## 🐍 Contribution Snake
+
+<div align="center">
+
+**Watch the snake travel across my GitHub contribution squares!**
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HadiAbuAisha/hadiAbuAisha/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HadiAbuAisha/hadiAbuAisha/output/github-contribution-grid-snake.svg" />
+  <img alt="Animated snake moving through the GitHub contribution grid" src="https://raw.githubusercontent.com/HadiAbuAisha/hadiAbuAisha/output/github-contribution-grid-snake.svg" width="100%" />
+</picture>
+
+<sub>✨ Generated automatically from GitHub contributions via Actions. The graphic appears after the first successful workflow run.</sub>
+
+</div>
+
+---
 
 ## 📊 GitHub activity
 
