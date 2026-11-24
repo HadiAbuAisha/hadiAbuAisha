@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CampusFlow | Interactive Student Demo</title><style>
+:root{font-family:Inter,system-ui,Arial,sans-serif;color:#1d2d4b}*{box-sizing:border-box}
+body{margin:0;background:#f2f6fd}.layout{display:flex;min-height:100vh}
+aside{width:245px;flex-shrink:0;background:#10203a;color:white;padding:28px 20px}aside a{color:#b6cdec;display:block;text-decoration:none;margin:22px 0}
+aside a:hover{color:white}main{max-width:1250px;width:100%;margin:0 auto;padding:38px}
+h1{font-size:2rem;margin:0}h2{font-size:1.12rem}p{color:#62718c}.meta{font-size:.8rem;color:#3f8b7a;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:27px 0}
+.card,.panel{background:white;border:1px solid #e1e8f3;border-radius:18px;padding:22px;box-shadow:0 8px 30px #10203a06}
+.value{font-weight:800;font-size:2.4rem;color:#183f89;margin-top:7px}
+.grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}
+input,select,button{font:inherit;padding:10px 12px;border:1px solid #cad5e6;border-radius:9px;background:white}
+button{background:#2456c6;color:white;border:none;cursor:pointer;font-weight:650}button:hover{background:#1c4398}button.danger{background:#fff0ef;color:#b93037}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px}.form button{grid-column:span 2}
+table{width:100%;border-collapse:collapse;font-size:.89rem}td,th{padding:12px 8px;border-bottom:1px solid #eaf0f8;text-align:left}th{color:#7787a1;font-weight:700}
+.scroll{overflow-x:auto}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.notice{font-size:.8rem;color:#8b5422;background:#fff5e4;padding:10px 14px;border-radius:8px;margin:14px 0}
+small{color:#8593aa}.chip{color:#14715f;background:#e4f8f2;border-radius:20px;padding:5px 10px}
+@media(max-width:870px){aside{display:none}.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}main{padding:24px}}
+@media(max-width:460px){.cards,.form{grid-template-columns:1fr}.form button{grid-column:span 1}}
+</style></head><body><div class="layout"><aside><h2 style="font-size:1.4rem">🎓 CampusFlow</h2><div class="meta" style="color:#67e5ce">STUDENT PORTAL DEMO</div><hr style="border-color:#344a65;margin:25px 0"><a href="../">← Back to showcase</a><a href="#dashboard">◫ Overview</a><a href="#students">♙ Students</a><a href="#courses">▤ Courses</a><p style="color:#9fb1ce;font-size:.8rem;margin-top:60px">Browser-only demo<br>No personal data<br>No server connection</p></aside>
+<main id="dashboard"><div class="row"><div><div class="meta">ACADEMIC MANAGEMENT / DEMO</div><h1>Student overview</h1><p>Manage fictional learner records in your browser.</p></div><span class="chip">● Local demo mode</span></div>
+<div class="notice">This is a front-end demonstration, not the live PHP/MariaDB application. Records stay in this browser only. Never enter real student information.</div>
+<section class="cards"><div class="card"><small>Total students</small><div id="studentCount" class="value"></div></div><div class="card"><small>Courses offered</small><div id="courseCount" class="value">4</div></div><div class="card"><small>Mean student score</small><div id="averageScore" class="value"></div></div></section>
+<div class="grid"><section class="panel" id="students"><div class="row"><h2>Student directory</h2><input id="search" aria-label="Search students" placeholder="Search name or course..."></div><div class="scroll"><table><thead><tr><th>Student</th><th>Course</th><th>Score</th><th>Action</th></tr></thead><tbody id="studentsList"></tbody></table></div><p id="empty" hidden>No matching records found.</p></section>
+<div><section class="panel"><h2>Add a fictional student</h2><form id="form" class="form"><label>Student name<input style="width:100%;margin-top:5px" name="name" maxlength="60" required placeholder="e.g. Maya Rivers"></label><label>Score (0–100)<input style="width:100%;margin-top:5px" name="score" type="number" min="0" max="100" required value="85"></label><label style="grid-column:span 2">Course<select name="course" style="width:100%;margin-top:5px"><option>Algorithms</option><option>Databases</option><option>Web Development</option><option>Artificial Intelligence</option></select></label><button type="submit">Add sample record</button></form><p id="feedback" role="status"></p></section>
+<section class="panel" id="courses" style="margin-top:18px"><h2>Course performance</h2><div id="bars"></div></section><button class="danger" id="reset" style="margin-top:16px">Reset demo data</button></div></div>
+<footer style="font-size:.8rem;color:#7d8ba5;margin-top:28px">AI-assisted portfolio starter • For learning and demonstration • Synthetic data only</footer></main></div>
+<script>
+(()=>{'use strict';
+const KEY='campusflow-public-demo-v1',courses=['Algorithms','Databases','Web Development','Artificial Intelligence'];
+const seed=[{name:'Maya Rivers',course:'Algorithms',score:94},{name:'Noah Reed',course:'Databases',score:82},{name:'Lina West',course:'Web Development',score:91},{name:'Omar Ellis',course:'Artificial Intelligence',score:88},{name:'Sofia Hart',course:'Algorithms',score:77},{name:'Ava Chen',course:'Web Development',score:95}];
+let records;
+function load(){try{const v=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(v)&&v.every(x=>x&&typeof x.name==='string'&&courses.includes(x.course)&&Number.isFinite(x.score)&&x.score>=0&&x.score<=100)){return v}}catch(e){}return seed.map(x=>({...x}))}
+function store(){try{localStorage.setItem(KEY,JSON.stringify(records))}catch(e){document.querySelector('#feedback').textContent='Storage unavailable; changes are temporary.'}}
+const $=s=>document.querySelector(s);
+function render(){const q=$('#search').value.toLowerCase(),rows=records.filter(x=>(x.name+' '+x.course).toLowerCase().includes(q)),tbody=$('#studentsList');tbody.replaceChildren();
+rows.forEach(x=>{const tr=document.createElement('tr');[x.name,x.course,String(x.score)+'%'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});const td=document.createElement('td'),b=document.createElement('button');b.className='danger';b.textContent='Remove';b.setAttribute('aria-label','Remove '+x.name);b.onclick=()=>{const i=records.indexOf(x);if(i>-1){records.splice(i,1);store();render()}};td.append(b);tr.append(td);tbody.append(tr)});
+$('#empty').hidden=rows.length>0;$('#studentCount').textContent=records.length;$('#averageScore').textContent=records.length?(records.reduce((s,x)=>s+x.score,0)/records.length).toFixed(1)+'%':'—';
+const bars=$('#bars');bars.replaceChildren();courses.forEach(c=>{const scores=records.filter(x=>x.course===c).map(x=>x.score),avg=scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:0;const p=document.createElement('p');p.textContent=c+' · '+(scores.length?avg.toFixed(1)+'%':'No records');p.style.cssText='font-size:.84rem;margin-bottom:4px';const track=document.createElement('div');track.style.cssText='height:9px;background:#e9f0f9;border-radius:8px;overflow:hidden';const fill=document.createElement('div');fill.style.cssText='height:100%;background:#3478de;border-radius:8px;width:'+avg+'%';track.append(fill);bars.append(p,track)})}
+records=load();$('#search').addEventListener('input',render);
+$('#form').addEventListener('submit',e=>{e.preventDefault();const data=new FormData(e.currentTarget),name=String(data.get('name')||'').trim(),course=String(data.get('course')),score=Number(data.get('score'));if(name.length<2||name.length>60||!courses.includes(course)||!Number.isFinite(score)||score<0||score>100){$('#feedback').textContent='Please enter a valid fictional name, course and score.';return}records.unshift({name,course,score});store();e.currentTarget.reset();$('#feedback').textContent='Demo record added locally.';render()});
+$('#reset').onclick=()=>{records=seed.map(x=>({...x}));store();render()};render();
+})();
+</script></body></html>
