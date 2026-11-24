@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Education Insights | Synthetic Education Analytics</title>
+<style>
+:root{font-family:Inter,system-ui,Arial,sans-serif;color:#15253f}*{box-sizing:border-box}body{margin:0;background:#f3f7fc}
+header{background:linear-gradient(110deg,#102449,#1a526d);color:white;padding:58px 20px 85px}header>div,main{max-width:1050px;margin:auto}
+h1{font-size:clamp(2.5rem,5vw,3.8rem);margin:14px 0;letter-spacing:-.045em}header p{color:#d2e4f5;line-height:1.6;max-width:640px}
+a{color:#b6f4ea}.back{text-decoration:none;font-size:.85rem}main{padding:0 20px 50px;margin-top:-48px}
+.cards,.charts{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card,.panel{background:white;border:1px solid #e1eaf5;border-radius:17px;box-shadow:0 12px 28px #10244810;padding:22px}
+.card span{color:#657591;font-size:.9rem}.value{font-size:2rem;font-weight:800;margin-top:6px}
+.controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin:28px 0 15px}
+select{font:inherit;border:1px solid #c3d3e9;border-radius:9px;padding:9px}h2{margin:0;font-size:1.3rem}p.note{color:#657591;line-height:1.65}
+.charts{grid-template-columns:1fr 1fr}.chart{width:100%;height:auto;min-height:240px}svg text{font:13px system-ui,Arial,sans-serif;fill:#516178}
+table{border-collapse:collapse;width:100%}th,td{padding:13px 10px;text-align:left;border-bottom:1px solid #e3eaf3}th{background:#eef4fc}
+footer{max-width:1050px;margin:0 auto;padding:15px 20px 40px;color:#7a89a3;font-size:.8rem}
+@media(max-width:700px){.cards{grid-template-columns:1fr 1fr}.charts{grid-template-columns:1fr}}
+</style></head>
+<body><header><div><a class="back" href="../">← Back to project showcase</a><div style="margin-top:26px;color:#68e2d3;font-size:.85rem;font-weight:800">PYTHON DATA ANALYTICS / PORTFOLIO DEMO</div><h1>Education Insights</h1><p>Explore reproducible learning analytics based on <strong>360 fictional education records</strong>. This demonstration illustrates data cleaning, aggregation, and visual communication, not real student outcomes.</p></div></header>
+<main><section class="cards"><div class="card"><span>Sample records</span><div class="value">360</div></div><div class="card"><span>Course groups</span><div class="value">6</div></div><div class="card"><span>Average score</span><div class="value">69.6</div></div><div class="card"><span>Overall pass rate</span><div class="value">75.6%</div></div></section>
+<div class="controls"><div><h2>Explore course performance</h2><p class="note">Change the metric to redraw the chart.</p></div><label for="metric">Chart metric <select id="metric"><option value="score">Average score</option><option value="pass">Pass rate</option><option value="students">Number of records</option></select></label></div>
+<section class="charts"><article class="panel"><h2>Course comparison</h2><svg id="courseChart" class="chart" viewBox="0 0 540 300" role="img" aria-label="Bar chart of course metrics"></svg></article><article class="panel"><h2>Yearly cohort trend</h2><svg class="chart" viewBox="0 0 540 300" role="img" aria-label="Cohort pass rate line chart"><line x1="68" x2="500" y1="238" y2="238" stroke="#d2deec" stroke-width="2"/><line x1="68" x2="68" y1="35" y2="238" stroke="#d2deec" stroke-width="2"/><polyline points="125,97 282,110 440,126" fill="none" stroke="#0c988d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><g fill="#0c988d"><circle cx="125" cy="97" r="7"/><circle cx="282" cy="110" r="7"/><circle cx="440" cy="126" r="7"/></g><g text-anchor="middle"><text x="125" y="78">77.8%</text><text x="282" y="90">75.9%</text><text x="440" y="106">73.4%</text><text x="125" y="267">2023</text><text x="282" y="267">2024</text><text x="440" y="267">2025</text></g><text x="15" y="32">Pass rate (%)</text></svg></article></section>
+<section class="panel" style="margin-top:18px"><h2>Course-level details</h2><p class="note">All records are synthetic. Values are rounded for display.</p><div style="overflow:auto"><table><thead><tr><th>Course</th><th>Records</th><th>Mean score</th><th>Pass rate</th></tr></thead><tbody id="detailRows"></tbody></table></div></section>
+<p class="note" style="border-left:3px solid #2a9d91;padding-left:15px;margin-top:24px">The data is artificially generated. Observed relationships do not establish causality. This is a static report derived from a separate Python/Pandas/Matplotlib project and is not connected to an educational institution.</p></main>
+<footer>Education Insights · Reproducible synthetic data demo · AI-assisted portfolio starter</footer>
+<script>
+(()=>{const records=[
+{course:'Statistics',students:55,score:70.8473,pass:78.1818},
+{course:'Programming',students:48,score:70.7604,pass:77.0833},
+{course:'Web Development',students:71,score:70.7254,pass:81.6901},
+{course:'Databases',students:61,score:69.3213,pass:72.1311},
+{course:'Networks',students:64,score:68.5984,pass:71.875},
+{course:'Algorithms',students:61,score:67.5590,pass:72.1311}
+],ns='http://www.w3.org/2000/svg',chart=document.getElementById('courseChart'),metric=document.getElementById('metric'),tbody=document.getElementById('detailRows');
+function draw(){const key=metric.value,max=key==='students'?80:100;chart.replaceChildren();
+function el(tag,attrs,text){let e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,String(v)));if(text!==undefined)e.textContent=text;chart.append(e);return e}
+records.forEach((r,i)=>{const y=35+i*39,x=151,width=(r[key]/max)*315;
+el('text',{x:141,y:y+17,'text-anchor':'end','font-size':'12'},r.course);
+el('rect',{x,y:y+2,width:320,height:22,rx:6,fill:'#e8f0f9'});
+el('rect',{x,y:y+2,width,height:22,rx:6,fill:key==='pass'?'#0b9c91':'#3972de'});
+el('text',{x:Math.min(x+width+8,493),y:y+18,'font-size':'12'},key==='students'?r.students:key==='score'?r.score.toFixed(1):r.pass.toFixed(1)+'%')
+})}
+records.forEach(r=>{const tr=document.createElement('tr');[r.course,r.students,r.score.toFixed(1),r.pass.toFixed(1)+'%'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});tbody.append(tr)});
+metric.addEventListener('change',draw);draw();
+})();
+</script></body></html>
