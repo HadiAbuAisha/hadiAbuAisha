@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Computer science learning portfolio and interactive project demos"><title>Computer Science Project Showcase</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:#0c1324;color:#eaf1fb}a{color:inherit}
+.container{max-width:1050px;margin:auto;padding:25px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px}
+mark{background:#193a41;color:#63e5cf;padding:5px 10px;border-radius:20px;font-size:.8rem}
+header{padding:70px 0 55px}h1{font-size:clamp(2.6rem,6vw,4.4rem);letter-spacing:-.06em;margin:14px 0}p{color:#aab9d1;line-height:1.7}.lead{font-size:1.13rem;max-width:730px}
+.layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding-bottom:80px}
+.card{background:#141e33;border:1px solid #2c3953;border-radius:22px;overflow:hidden;transition:transform .2s,border .2s}
+.card:hover{transform:translateY(-4px);border-color:#53b9e1}
+.art{height:178px;display:grid;place-items:center;font-size:4rem;background:radial-gradient(circle at 50% 10%,#2376a0 0%,#13283d 60%,#141e33 100%)}
+.green .art{background:radial-gradient(circle at 50% 10%,#1c8f85 0%,#143b40 60%,#141e33 100%)}
+.body{padding:28px}h2{margin:0 0 7px;font-size:1.4rem}.tags{font-size:.8rem;color:#76d8e7;font-weight:600;margin-bottom:15px}
+.btn{display:inline-block;margin-top:15px;text-decoration:none;background:#58dcce;color:#071a22;border-radius:10px;padding:12px 18px;font-weight:800}
+.note{border-left:3px solid #54cfc1;padding-left:15px;color:#b7c7da}
+footer{border-top:1px solid #2c3953;color:#8f9eb8;padding:25px 0;font-size:.85rem}
+@media(max-width:720px){.layout{grid-template-columns:1fr}header{padding:55px 0 35px}}
+</style></head>
+<body><div class="container"><nav class="top"><strong>HADI / PROJECT LAB</strong><mark>Computer Science Portfolio</mark></nav>
+<header><div style="color:#64e0d4;font-weight:700">REAL CODE. PRACTICAL LEARNING.</div>
+<h1>Projects that turn<br>ideas into software.</h1><p class="lead">An interactive showcase of web development and Python data analysis projects. The dashboards use fictional examples to keep the demos safe and reproducible.</p></header>
+<section class="layout" aria-label="Demos">
+<article class="card"><div class="art" aria-hidden="true">🎓</div><div class="body"><h2>CampusFlow</h2><div class="tags">STUDENT MANAGEMENT · FRONTEND DEMO</div>
+<p>Explore a responsive student administration dashboard. Add, search and remove fictional records in your browser. This is a static preview of a separate PHP and database learning project.</p>
+<a class="btn" href="campusflow/">Open interactive demo →</a></div></article>
+<article class="card green"><div class="art" aria-hidden="true">📊</div><div class="body"><h2>Education Insights</h2><div class="tags">PYTHON · DATA ANALYSIS · VISUALISATION</div>
+<p>Explore course scores and completion trends computed from 360 synthetic records. Toggle charts between score and passing rate. No real student data is used.</p>
+<a class="btn" href="education-insights/">Explore data report →</a></div></article>
+</section><p class="note">These are portfolio demos. CampusFlow uses browser-local demo data; it is not a live database-backed student information system. The analytics report uses generated sample data. Projects began as AI-assisted learning starters and should be reviewed and developed further before claiming independent authorship.</p>
+<footer>Portfolio experiments • No private student information • © 2026</footer></div></body></html>
