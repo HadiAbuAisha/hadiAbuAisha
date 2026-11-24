@@ -70,7 +70,7 @@ Three hands-on learning repositories covering **web development**, **Python data
 <table>
 <tr>
 <td width="40%" valign="middle">
-<a href="https://github.com/HadiAbuAisha/student-portal-web"><img src="https://raw.githubusercontent.com/HadiAbuAisha/student-portal-web/main/docs/assets/hero.png" width="100%" alt="Illustrated CampusFlow project cover"></a>
+<a href="https://github.com/HadiAbuAisha/student-portal-web"><img src="https://raw.githubusercontent.com/HadiAbuAisha/student-portal-web/main/docs/assets/cover.svg" width="100%" alt="Illustrated CampusFlow project cover"></a>
 </td>
 <td valign="middle">
 <h3>🎓 <a href="https://github.com/HadiAbuAisha/student-portal-web">CampusFlow — Student Management</a></h3>
@@ -81,7 +81,7 @@ Three hands-on learning repositories covering **web development**, **Python data
 </tr>
 <tr>
 <td width="40%" valign="middle">
-<a href="https://github.com/HadiAbuAisha/education-insights-python"><img src="https://raw.githubusercontent.com/HadiAbuAisha/education-insights-python/main/docs/assets/hero.png" width="100%" alt="Illustrated Education Insights project cover"></a>
+<a href="https://github.com/HadiAbuAisha/education-insights-python"><img src="https://raw.githubusercontent.com/HadiAbuAisha/education-insights-python/main/docs/assets/cover.svg" width="100%" alt="Illustrated Education Insights project cover"></a>
 </td>
 <td valign="middle">
 <h3>📊 <a href="https://github.com/HadiAbuAisha/education-insights-python">Education Insights — Data Analysis</a></h3>
@@ -94,7 +94,7 @@ Three hands-on learning repositories covering **web development**, **Python data
 </tr>
 <tr>
 <td width="40%" valign="middle">
-<a href="https://github.com/HadiAbuAisha/library-desk-javafx"><img src="https://raw.githubusercontent.com/HadiAbuAisha/library-desk-javafx/main/docs/assets/hero.png" width="100%" alt="Illustrated LibraryDesk project cover"></a>
+<a href="https://github.com/HadiAbuAisha/library-desk-javafx"><img src="https://raw.githubusercontent.com/HadiAbuAisha/library-desk-javafx/main/docs/assets/cover.svg" width="100%" alt="Illustrated LibraryDesk project cover"></a>
 </td>
 <td valign="middle">
 <h3>📚 <a href="https://github.com/HadiAbuAisha/library-desk-javafx">LibraryDesk — Desktop Library Manager</a></h3>
