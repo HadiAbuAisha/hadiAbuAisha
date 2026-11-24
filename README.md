@@ -63,6 +63,53 @@ I love exploring **software development**, **web technologies**, and **cybersecu
 
 ## 🚀 Featured projects
 
+### 🧩 Computer Science Portfolio — New Projects
+
+Three hands-on learning repositories covering **web development**, **Python data analysis**, and **Java desktop applications**. Each project has its own code, documentation, and setup instructions.
+
+<table>
+<tr>
+<td width="40%" valign="middle">
+<a href="https://github.com/HadiAbuAisha/student-portal-web"><img src="https://raw.githubusercontent.com/HadiAbuAisha/student-portal-web/main/docs/assets/hero.png" width="100%" alt="Illustrated CampusFlow project cover"></a>
+</td>
+<td valign="middle">
+<h3>🎓 <a href="https://github.com/HadiAbuAisha/student-portal-web">CampusFlow — Student Management</a></h3>
+<p><strong>PHP · MariaDB · JavaScript</strong></p>
+<p>Full-stack portfolio prototype for managing fictional students, courses, enrolments and grades, with a responsive dashboard. PHP checks passed; database integration still needs end-to-end testing.</p>
+<a href="https://github.com/HadiAbuAisha/student-portal-web"><strong>📂 Source code &amp; README</strong></a>
+</td>
+</tr>
+<tr>
+<td width="40%" valign="middle">
+<a href="https://github.com/HadiAbuAisha/education-insights-python"><img src="https://raw.githubusercontent.com/HadiAbuAisha/education-insights-python/main/docs/assets/hero.png" width="100%" alt="Illustrated Education Insights project cover"></a>
+</td>
+<td valign="middle">
+<h3>📊 <a href="https://github.com/HadiAbuAisha/education-insights-python">Education Insights — Data Analysis</a></h3>
+<p><strong>Python · pandas · matplotlib</strong></p>
+<p>Reproducible analysis of 360 synthetic education records, with visualisations, CSV summaries and an HTML report. Includes passing unit tests and generated charts.</p>
+<a href="https://github.com/HadiAbuAisha/education-insights-python"><strong>📂 Source code &amp; README</strong></a>
+&nbsp;·&nbsp;
+<a href="https://github.com/HadiAbuAisha/education-insights-python/tree/main/docs"><strong>📈 Charts</strong></a>
+</td>
+</tr>
+<tr>
+<td width="40%" valign="middle">
+<a href="https://github.com/HadiAbuAisha/library-desk-javafx"><img src="https://raw.githubusercontent.com/HadiAbuAisha/library-desk-javafx/main/docs/assets/hero.png" width="100%" alt="Illustrated LibraryDesk project cover"></a>
+</td>
+<td valign="middle">
+<h3>📚 <a href="https://github.com/HadiAbuAisha/library-desk-javafx">LibraryDesk — Desktop Library Manager</a></h3>
+<p><strong>Java 21 · JavaFX · CSV</strong></p>
+<p>Offline library-management prototype with catalogue search, loans, returns and local CSV persistence. Business logic was tested; JavaFX GUI launch still needs verification.</p>
+<a href="https://github.com/HadiAbuAisha/library-desk-javafx"><strong>📂 Source code &amp; README</strong></a>
+</td>
+</tr>
+</table>
+
+<sub>These projects began as AI-assisted learning starters. Documentation distinguishes completed checks from features not yet fully verified, and uses fictional sample data. Covers are illustrative artwork rather than screenshots.</sub>
+
+### 🌟 Other featured work
+
+
 <div align="center">
 <a href="https://github.com/HadiAbuAisha/Gaza-s-Memory-Platform">
 <img src="./assets/gaza-memory-card.svg" width="95%" alt="Gaza's Memory Platform"/>
